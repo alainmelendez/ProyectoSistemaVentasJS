@@ -66,6 +66,15 @@ class Orden{
         }
         return totalVenta;
     }
+
+    mostrarOrden(){
+        let productosOrden = '';
+        for(let producto of this._productos){
+            productosOrden += producto.toString() + ' ';
+        }
+
+        console.log(`Orden: ${this._idOrden} Total: ${this.calcularTotal()}, Productos: ${productosOrden}`)
+    }
     
 }
 
